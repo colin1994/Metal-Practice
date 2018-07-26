@@ -1,8 +1,12 @@
 # Metal-Practice
 
 > 这是我的小专栏 [iOS 图像处理](https://xiaozhuanlan.com/colin) 对应的源码。欢迎订阅，配合教程看效果更佳~
+>
+> 顺手给个星星哦～
 
 
+
+# Metal，启程
 
 从 2014 年，Apple 正式推出 Metal 到现在，这个 Metal 系列教程，酝酿了很久，却迟迟没有进展。
 
@@ -36,23 +40,23 @@
 
 然后，就不了了之了。
 
+Metal 系列的实战教程，会循序渐进，穿插详细介绍各个用到的 Metal 对象。
 
+由于 Metal（iOS 8 + A7），MetalKit（iOS 9 + A7）的软／硬件限制，以及不同读者的需求，之后的配套 Demo，会同时包含 iOS+Swift 和 macOS+ObjC 两种，文章以 iOS+Swift 进行演示。并且尽可能不用 MetalKit，功能都自己实现（避免一些实现细节被屏蔽了，以及降低系统版本限制）。当然，也会有专门的文章，介绍 MetalKit 相关。
 
-这个系列的文章，会在 **iOS 平台上，通过 Swift 来实现**。默认大家对 iOS 开发以及 Swift 都有基础的了解，不会再科普这部分知识。每篇文章争取控制在 15 分钟的阅读量，细分知识点，便于随时阅读，学习。
+另外，每节 Demo 都有 start ／ end 两份代码，建议阅读完后，自己根据 start 基础工程，完成本节新的内容。该系列 Demo 主要是为了学习 Metal，所以一些语法特性，代码／文件结构，容错，封装等，不会去细究。
 
-另外，之前的实战，会侧重于**图像处理**，比如**滤镜，画笔，马赛克，增高，相机，AR 贴图**等。开发过程中，也会结合系统的其他框架，比如 **Core Image、ARKit、Core ML、Vision** 等，做一些好玩的事情。
-
-
-
-有涉及代码的，都会提供对应的源码。区分 **Start / End**，只需要关注本节内容即可。也方便阅读后，直接上手编写本节内容，免去无关的环境搭建等。
-
-
-
-> 具体源码，可以在我的 Github 上找到：[Metal-Practice](https://github.com/colin1994/Metal-Practice)
+每篇文章争取控制在 15 分钟的阅读量，细分知识点，便于随时阅读，学习。
 
 
 
--------
+另外，之后的实战，会侧重于**图像处理**，比如**滤镜，画笔，马赛克，增高，相机，AR 贴图**等。开发过程中，也会结合系统的其他框架，比如 **Core Image、ARKit、Core ML、Vision** 等，做一些好玩的事情。
+
+> PS：
+> 订阅后的朋友，可以加我微信：wxidlongze，拉你进群。交流，扯淡，学习资源分享～
+>  最后，源码在文末～
+
+------
 
 
 
@@ -60,25 +64,25 @@
 
 ### 基础概念：
 
-**一。Metal 概述**
+**[一。Metal 概述](https://xiaozhuanlan.com/topic/3420765198)**
 
 > Metal 是什么，Metal 能做什么，为什么要用 Metal。
 
 
 
-**二。Metal 框架一览**
+**[二。Metal 框架一览](https://xiaozhuanlan.com/topic/1287954630)**
 
->Metal 进行图像处理的整体框架。宏观介绍渲染管线。
+> Metal 进行图像处理的整体框架。宏观介绍渲染管线。
 
 
 
 ### 基础实践：
 
-**三。清屏**
+**[三。清屏](https://xiaozhuanlan.com/topic/9870134265)**
 
 > 最最最最简单的一个基础工程。介绍整体的显示渲染流程。
 
-
+![](https://diycode.b0.upaiyun.com/photo/2018/4677bca4a9633908b463e670646d434c.png)
 
 **四。绘制一个三角形**
 
@@ -124,10 +128,9 @@
 
 > 不再是逐像素的简单处理，涉及形变。
 
-
-
 ...
-
-
-
 **To be continued ~**
+
+------
+
+具体源码，可以在我的 Github 上找到：[Metal-Practice](https://github.com/colin1994/Metal-Practice)，顺手给个星星哦～
