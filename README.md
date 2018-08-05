@@ -84,9 +84,13 @@ Metal 系列的实战教程，会循序渐进，穿插详细介绍各个用到�
 
 ![](https://diycode.b0.upaiyun.com/photo/2018/4677bca4a9633908b463e670646d434c.png)
 
-**四。绘制一个三角形**
+
+
+[**四。绘制一个三角形**](https://xiaozhuanlan.com/topic/6503719284)
 
 > 堪称图形界的 Hello World。会较为完整的过一遍渲染管线。麻雀虽小，五脏俱全。
+
+![](https://diycode.b0.upaiyun.com/photo/2018/68788a0103eac111ea445b0dcf02fa58.png)
 
 
 
