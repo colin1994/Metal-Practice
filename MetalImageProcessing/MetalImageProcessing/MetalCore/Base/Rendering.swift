@@ -10,7 +10,7 @@ import Foundation
 import Metal
 
 extension MTLCommandBuffer {
-    func renderQuad(pipelineState: MTLRenderPipelineState, inputTexture: Texture, outputTexture: Texture,  clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = standardImageVertices) {
+    func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings:ShaderUniformSettings? = nil, inputTextures: [UInt:Texture], outputTexture: Texture,  clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices) {
         let vertexBuffer = sharedContext.device.makeBuffer(bytes: imageVertices,
                                                            length: imageVertices.count * MemoryLayout<Float>.size,
                                                            options: [])!
@@ -27,13 +27,19 @@ extension MTLCommandBuffer {
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
         
-        let inputTextureCoordinates = standardTextureCoordinates
-        let textureBuffer = sharedContext.device.makeBuffer(bytes: inputTextureCoordinates,
-                                                            length: inputTextureCoordinates.count * MemoryLayout<Float>.size,
-                                                            options: [])!
-        renderEncoder.setVertexBuffer(textureBuffer, offset: 0, index: 1)
-        renderEncoder.setFragmentTexture(inputTexture.texture, index: 0)
         
+        for textureIndex in 0..<inputTextures.count {
+            let currentTexture = inputTextures[UInt(textureIndex)]!
+            
+            let inputTextureCoordinates = standardTextureCoordinates
+            let textureBuffer = sharedContext.device.makeBuffer(bytes: inputTextureCoordinates,
+                                                                length: inputTextureCoordinates.count * MemoryLayout<Float>.size,
+                                                                options: [])!
+            renderEncoder.setVertexBuffer(textureBuffer, offset: 0, index: 1 + textureIndex)
+            renderEncoder.setFragmentTexture(currentTexture.texture, index: textureIndex)
+        }
+        
+        uniformSettings?.restoreShaderSettings(renderEncoder: renderEncoder)
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
         renderEncoder.endEncoding()
     }

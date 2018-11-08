@@ -40,7 +40,7 @@ public class RenderView: UIView {
     }
 
     private func commonInit() {
-        renderPipelineState = generateRenderPipelineState(vertexFunctionName: FunctionName.PassthroughVertex,
+        renderPipelineState = generateRenderPipelineState(vertexFunctionName: FunctionName.OneInputVertex,
                                                           fragmentFunctionName: FunctionName.PassthroughFragment)
 
         metalView.delegate = self
@@ -74,7 +74,7 @@ extension RenderView: MTKViewDelegate {
         let scaledVertices = fillMode.transformVertices(verticallyInvertedImageVertices, fromInputSize:CGSize(width: imageTexture.texture.width, height: imageTexture.texture.height), toFitSize:metalView.drawableSize)
 
         let commandBuffer = sharedContext.commandQueue.makeCommandBuffer()!
-        commandBuffer.renderQuad(pipelineState: renderPipelineState, inputTexture: imageTexture, outputTexture: outputTexture, clearColor:clearColor, imageVertices: scaledVertices)
+        commandBuffer.renderQuad(pipelineState: renderPipelineState, inputTextures: [0:imageTexture], outputTexture: outputTexture, clearColor:clearColor, imageVertices: scaledVertices)
         
         commandBuffer.present(currentDrawable)
         commandBuffer.commit()

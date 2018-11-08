@@ -20,6 +20,9 @@ public protocol ImageConsumer: AnyObject {
     func newTextureAvailable(_ texture: Texture, fromSourceIndex: UInt)
 }
 
+public protocol ImageProcessingOperation: ImageConsumer, ImageSource {
+}
+
 infix operator --> : AdditionPrecedence
 @discardableResult public func --><T: ImageConsumer>(source: ImageSource, destination: T) -> T {
     source.addTarget(destination)
