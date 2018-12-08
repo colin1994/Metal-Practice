@@ -10,6 +10,7 @@
 		3B0120CC214E4ACA00B110A9 /* FillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0120CB214E4ACA00B110A9 /* FillMode.swift */; };
 		3B0120D0214E844A00B110A9 /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0120CF214E844A00B110A9 /* Pipeline.swift */; };
 		3B0120D4214E89A700B110A9 /* PictureInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0120D3214E89A700B110A9 /* PictureInput.swift */; };
+		3B0756DB21AF7F87000834C1 /* toonTest.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0756DA21AF7F87000834C1 /* toonTest.png */; };
 		3B13A043218B1F2300FD2A0F /* LookupFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13A042218B1F2300FD2A0F /* LookupFilter.swift */; };
 		3B13A045218B208B00FD2A0F /* LookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B13A044218B208B00FD2A0F /* LookupFilter.metal */; };
 		3B13A047218B23BA00FD2A0F /* lut_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B13A046218B23BA00FD2A0F /* lut_neutral.png */; };
@@ -28,6 +29,9 @@
 		3B8B3D742185B7A200BF6EB8 /* BrightnessFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3D732185B7A200BF6EB8 /* BrightnessFilter.metal */; };
 		3B8B3D782185B96700BF6EB8 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3D762185B96600BF6EB8 /* SimpleViewController.swift */; };
 		3B8B3D7A2185B99600BF6EB8 /* ColorFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B3D792185B99600BF6EB8 /* ColorFilterViewController.swift */; };
+		3B95D05321AEB93C000FC36B /* ToonFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B95D05221AEB93C000FC36B /* ToonFilter.metal */; };
+		3B95D05521AEB949000FC36B /* ToonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95D05421AEB949000FC36B /* ToonFilter.swift */; };
+		3B95D05721AEB961000FC36B /* ToonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95D05621AEB961000FC36B /* ToonViewController.swift */; };
 		3B9D8EB6218C81DD0030D468 /* image_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B9D8EB4218C81DC0030D468 /* image_4.jpg */; };
 		3B9D8EB7218C81DD0030D468 /* image_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B9D8EB5218C81DD0030D468 /* image_3.jpg */; };
 		3BC91ADE213B7CF1008E86C3 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC91ADD213B7CF1008E86C3 /* RenderView.swift */; };
@@ -39,12 +43,16 @@
 		3BC91AF5213BF391008E86C3 /* Texture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC91AF4213BF391008E86C3 /* Texture.swift */; };
 		3BD50EE4218D4D9B000F7CC9 /* SaturationFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD50EE3218D4D9B000F7CC9 /* SaturationFilter.swift */; };
 		3BD50EE6218D4DA8000F7CC9 /* SaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3BD50EE5218D4DA8000F7CC9 /* SaturationFilter.metal */; };
+		3BEBF07F21AD748F00FC832F /* ZoomBlurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBF07E21AD748F00FC832F /* ZoomBlurViewController.swift */; };
+		3BEBF08121AD74A000FC832F /* ZoomBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBF08021AD74A000FC832F /* ZoomBlur.swift */; };
+		3BEBF08321AD74B100FC832F /* ZoomBlur.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3BEBF08221AD74B100FC832F /* ZoomBlur.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B0120CB214E4ACA00B110A9 /* FillMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillMode.swift; sourceTree = "<group>"; };
 		3B0120CF214E844A00B110A9 /* Pipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
 		3B0120D3214E89A700B110A9 /* PictureInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureInput.swift; sourceTree = "<group>"; };
+		3B0756DA21AF7F87000834C1 /* toonTest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toonTest.png; sourceTree = "<group>"; };
 		3B13A042218B1F2300FD2A0F /* LookupFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupFilter.swift; sourceTree = "<group>"; };
 		3B13A044218B208B00FD2A0F /* LookupFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LookupFilter.metal; sourceTree = "<group>"; };
 		3B13A046218B23BA00FD2A0F /* lut_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_neutral.png; sourceTree = "<group>"; };
@@ -65,6 +73,9 @@
 		3B8B3D732185B7A200BF6EB8 /* BrightnessFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BrightnessFilter.metal; sourceTree = "<group>"; };
 		3B8B3D762185B96600BF6EB8 /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 		3B8B3D792185B99600BF6EB8 /* ColorFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFilterViewController.swift; sourceTree = "<group>"; };
+		3B95D05221AEB93C000FC36B /* ToonFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ToonFilter.metal; sourceTree = "<group>"; };
+		3B95D05421AEB949000FC36B /* ToonFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToonFilter.swift; sourceTree = "<group>"; };
+		3B95D05621AEB961000FC36B /* ToonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToonViewController.swift; sourceTree = "<group>"; };
 		3B9D8EB4218C81DC0030D468 /* image_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_4.jpg; sourceTree = "<group>"; };
 		3B9D8EB5218C81DD0030D468 /* image_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_3.jpg; sourceTree = "<group>"; };
 		3BC91ADD213B7CF1008E86C3 /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
@@ -77,6 +88,9 @@
 		3BC91AF4213BF391008E86C3 /* Texture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texture.swift; sourceTree = "<group>"; };
 		3BD50EE3218D4D9B000F7CC9 /* SaturationFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationFilter.swift; sourceTree = "<group>"; };
 		3BD50EE5218D4DA8000F7CC9 /* SaturationFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SaturationFilter.metal; sourceTree = "<group>"; };
+		3BEBF07E21AD748F00FC832F /* ZoomBlurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlurViewController.swift; sourceTree = "<group>"; };
+		3BEBF08021AD74A000FC832F /* ZoomBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlur.swift; sourceTree = "<group>"; };
+		3BEBF08221AD74B100FC832F /* ZoomBlur.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ZoomBlur.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +139,6 @@
 		3B5B68B5213A87C6006F7B17 /* MetalImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
-				3BE86F23218566CF00CB6922 /* Filters */,
 				3BC91AEE213BD8FE008E86C3 /* Practice */,
 				3BC91AE9213BD51E008E86C3 /* Resources */,
 				3B5B68C9213A8C97006F7B17 /* MetalCore */,
@@ -184,9 +197,23 @@
 		3B8B3D772185B96700BF6EB8 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
+				3B8B3D712185B75600BF6EB8 /* BrightnessFilter.swift */,
+				3B8B3D732185B7A200BF6EB8 /* BrightnessFilter.metal */,
+				3BD50EE3218D4D9B000F7CC9 /* SaturationFilter.swift */,
+				3BD50EE5218D4DA8000F7CC9 /* SaturationFilter.metal */,
 				3B8B3D792185B99600BF6EB8 /* ColorFilterViewController.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		3B95D05121AEB913000FC36B /* Toon */ = {
+			isa = PBXGroup;
+			children = (
+				3B95D05221AEB93C000FC36B /* ToonFilter.metal */,
+				3B95D05421AEB949000FC36B /* ToonFilter.swift */,
+				3B95D05621AEB961000FC36B /* ToonViewController.swift */,
+			);
+			path = Toon;
 			sourceTree = "<group>";
 		};
 		3BC91AE4213BD2D0008E86C3 /* Operations */ = {
@@ -210,6 +237,7 @@
 				3B9D8EB4218C81DC0030D468 /* image_4.jpg */,
 				3B13A046218B23BA00FD2A0F /* lut_neutral.png */,
 				3B13A04A218B250500FD2A0F /* lut_abao.png */,
+				3B0756DA21AF7F87000834C1 /* toonTest.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,6 +245,8 @@
 		3BC91AEE213BD8FE008E86C3 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				3B95D05121AEB913000FC36B /* Toon */,
+				3BEBF07D21AD748100FC832F /* ZoomBlur */,
 				3B8B3D772185B96700BF6EB8 /* Filter */,
 				3B8B3D752185B96600BF6EB8 /* SimpleView */,
 				3B5B68BA213A87C6006F7B17 /* Main.storyboard */,
@@ -224,15 +254,14 @@
 			path = Practice;
 			sourceTree = "<group>";
 		};
-		3BE86F23218566CF00CB6922 /* Filters */ = {
+		3BEBF07D21AD748100FC832F /* ZoomBlur */ = {
 			isa = PBXGroup;
 			children = (
-				3B8B3D712185B75600BF6EB8 /* BrightnessFilter.swift */,
-				3B8B3D732185B7A200BF6EB8 /* BrightnessFilter.metal */,
-				3BD50EE3218D4D9B000F7CC9 /* SaturationFilter.swift */,
-				3BD50EE5218D4DA8000F7CC9 /* SaturationFilter.metal */,
+				3BEBF07E21AD748F00FC832F /* ZoomBlurViewController.swift */,
+				3BEBF08021AD74A000FC832F /* ZoomBlur.swift */,
+				3BEBF08221AD74B100FC832F /* ZoomBlur.metal */,
 			);
-			path = Filters;
+			path = ZoomBlur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +296,7 @@
 				TargetAttributes = {
 					3B5B68B2213A87C6006F7B17 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -303,6 +332,7 @@
 				3B13A047218B23BA00FD2A0F /* lut_neutral.png in Resources */,
 				3BC91AEC213BD6AD008E86C3 /* image_2.jpg in Resources */,
 				3B5B68BC213A87C6006F7B17 /* Main.storyboard in Resources */,
+				3B0756DB21AF7F87000834C1 /* toonTest.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEBF07F21AD748F00FC832F /* ZoomBlurViewController.swift in Sources */,
 				3B79B3D721834588008BF06D /* ShaderUniformSettings.swift in Sources */,
 				3BC91AE3213BC81D008E86C3 /* Rendering.swift in Sources */,
 				3B0120D4214E89A700B110A9 /* PictureInput.swift in Sources */,
@@ -325,17 +356,22 @@
 				3B0120CC214E4ACA00B110A9 /* FillMode.swift in Sources */,
 				3B79B3DA218349CF008BF06D /* Color.swift in Sources */,
 				3BC91AF3213BEC38008E86C3 /* Constants.swift in Sources */,
+				3BEBF08121AD74A000FC832F /* ZoomBlur.swift in Sources */,
 				3B79B3DE21834B1F008BF06D /* Matrix.swift in Sources */,
+				3B95D05721AEB961000FC36B /* ToonViewController.swift in Sources */,
+				3BEBF08321AD74B100FC832F /* ZoomBlur.metal in Sources */,
 				3B8B3D782185B96700BF6EB8 /* SimpleViewController.swift in Sources */,
 				3BC91AE7213BD427008E86C3 /* Passthrough.metal in Sources */,
 				3B8B3D742185B7A200BF6EB8 /* BrightnessFilter.metal in Sources */,
 				3B8B3D722185B75600BF6EB8 /* BrightnessFilter.swift in Sources */,
 				3B8B3D7A2185B99600BF6EB8 /* ColorFilterViewController.swift in Sources */,
+				3B95D05321AEB93C000FC36B /* ToonFilter.metal in Sources */,
 				3B13A043218B1F2300FD2A0F /* LookupFilter.swift in Sources */,
 				3B5B68B7213A87C6006F7B17 /* AppDelegate.swift in Sources */,
 				3BD50EE6218D4DA8000F7CC9 /* SaturationFilter.metal in Sources */,
 				3B13A045218B208B00FD2A0F /* LookupFilter.metal in Sources */,
 				3B0120D0214E844A00B110A9 /* Pipeline.swift in Sources */,
+				3B95D05521AEB949000FC36B /* ToonFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
