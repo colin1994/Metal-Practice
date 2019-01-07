@@ -10,7 +10,7 @@ import Foundation
 import Metal
 
 extension MTLCommandBuffer {
-    func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings:ShaderUniformSettings? = nil, inputTextures: [UInt:Texture], outputTexture: Texture,  clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices) {
+    func renderQuad(pipelineState: MTLRenderPipelineState, uniformSettings:ShaderUniformSettings? = nil, inputTextures: [UInt:Texture], outputTexture: Texture,  clearColor: MTLClearColor = RenderColor.clearColor, imageVertices: [Float] = verticallyInvertedImageVertices, textureCoordinates: [Float] = standardTextureCoordinates) {
         let vertexBuffer = sharedContext.device.makeBuffer(bytes: imageVertices,
                                                            length: imageVertices.count * MemoryLayout<Float>.size,
                                                            options: [])!
@@ -31,16 +31,15 @@ extension MTLCommandBuffer {
         for textureIndex in 0..<inputTextures.count {
             let currentTexture = inputTextures[UInt(textureIndex)]!
             
-            let inputTextureCoordinates = standardTextureCoordinates
-            let textureBuffer = sharedContext.device.makeBuffer(bytes: inputTextureCoordinates,
-                                                                length: inputTextureCoordinates.count * MemoryLayout<Float>.size,
+            let textureBuffer = sharedContext.device.makeBuffer(bytes: textureCoordinates,
+                                                                length: textureCoordinates.count * MemoryLayout<Float>.size,
                                                                 options: [])!
             renderEncoder.setVertexBuffer(textureBuffer, offset: 0, index: 1 + textureIndex)
             renderEncoder.setFragmentTexture(currentTexture.texture, index: textureIndex)
         }
         
         uniformSettings?.restoreShaderSettings(renderEncoder: renderEncoder)
-        renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
+        renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: imageVertices.count / 2)
         renderEncoder.endEncoding()
     }
 }

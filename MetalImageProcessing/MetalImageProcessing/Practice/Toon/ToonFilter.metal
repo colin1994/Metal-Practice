@@ -12,50 +12,47 @@ using namespace metal;
 
 typedef struct
 {
-    float MagTol;
-    float Quantize;
+    float magTol;
+    float quantize;
 } ZoomBlurUniform;
 
 fragment half4 toonFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                             texture2d<half> inputTexture [[texture(0)]],
                             constant ZoomBlurUniform& uniforms [[ buffer(1) ]])
 {
-    
-    float ResS = 512.;
-    float ResT = 512.;
-
-    float MagTol = uniforms.MagTol;
-    float Quantize = uniforms.Quantize;
-    
     constexpr sampler quadSampler;
-    half3 irgb = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate).rgb;
-    float2 stp0 = float2(1./ResS, 0.);
-    float2 st0p = float2(0., 1./ResT);
-    float2 stpp = float2(1./ResS, 1./ResT);
-    float2 stpm = float2(1./ResS, -1./ResT);
+    float2 texCoord = fragmentInput.textureCoordinate;
+    half4 originColor = inputTexture.sample(quadSampler, texCoord);
     
-    const half3 W = half3(0.2125, 0.7154, 0.0721);
-    float im1m1 =    dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate-stpp).rgb, W);
-    float ip1p1 = dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate+stpp).rgb, W);
-    float im1p1 = dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate-stpm).rgb, W);
-    float ip1m1 = dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate+stpm).rgb, W);
-    float im10 =     dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate-stp0).rgb, W);
-    float ip10 =     dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate+stp0).rgb, W);
-    float i0m1 =     dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate-st0p).rgb, W);
-    float i0p1 =     dot(inputTexture.sample(quadSampler, fragmentInput.textureCoordinate+st0p).rgb, W);
+    // Sobel Operator
+    float2 resolution = float2(inputTexture.get_width(), inputTexture.get_height());
+
+    float2 stp0 = float2(1./resolution.x, 0.);
+    float2 st0p = float2(0., 1./resolution.y);
+    float2 stpp = float2(1./resolution.x, 1./resolution.y);
+    float2 stpm = float2(1./resolution.x, -1./resolution.y);
     
-    //H and V sobel filters
-    float h = -1.*im1p1 - 2.*i0p1 - 1.*ip1p1 + 1.*im1m1 + 2.*i0m1 + 1.*ip1m1;
-    float v = -1.*im1m1 - 2.*im10 - 1.*im1p1 + 1.*ip1m1 + 2.*ip10 + 1.*ip1p1;
-    float mag = length(float2(h, v));
+    float im1m1 = dot(inputTexture.sample(quadSampler, texCoord-stpp).rgb, luminanceWeighting);
+    float ip1p1 = dot(inputTexture.sample(quadSampler, texCoord+stpp).rgb, luminanceWeighting);
+    float im1p1 = dot(inputTexture.sample(quadSampler, texCoord-stpm).rgb, luminanceWeighting);
+    float ip1m1 = dot(inputTexture.sample(quadSampler, texCoord+stpm).rgb, luminanceWeighting);
+    float im10 = dot(inputTexture.sample(quadSampler, texCoord-stp0).rgb, luminanceWeighting);
+    float ip10 = dot(inputTexture.sample(quadSampler, texCoord+stp0).rgb, luminanceWeighting);
+    float i0m1 = dot(inputTexture.sample(quadSampler, texCoord-st0p).rgb, luminanceWeighting);
+    float i0p1 = dot(inputTexture.sample(quadSampler, texCoord+st0p).rgb, luminanceWeighting);
     
-    if (mag > MagTol) {
+    float Gx = -1.*im1p1 - 2.*i0p1 - 1.*ip1p1 + 1.*im1m1 + 2.*i0m1 + 1.*ip1m1;
+    float Gy = -1.*im1m1 - 2.*im10 - 1.*im1p1 + 1.*ip1m1 + 2.*ip10 + 1.*ip1p1;
+    float GValue = length(float2(Gx, Gy));
+    
+    if (GValue > uniforms.magTol) {
         return half4(0., 0., 0., 1.);
     } else {
-        irgb.rgb *= Quantize;
-        irgb.rgb += half3(.5,.5,.5);
-        int3 intrgb = int3(irgb.rgb);
-        irgb.rgb = half3(intrgb)/Quantize;
-        return half4(irgb, 1.);
+        // Color Quantization
+        originColor.rgb *= uniforms.quantize;
+        originColor.rgb += half3(.5, .5, .5);
+        int3 intrgb = int3(originColor.rgb);
+        originColor.rgb = half3(intrgb) / uniforms.quantize;
+        return half4(originColor.rgb, 1.);
     }
 }
