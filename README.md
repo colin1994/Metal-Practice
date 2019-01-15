@@ -124,7 +124,9 @@ Metal 系列的实战教程，会循序渐进，穿插详细介绍各个用到�
 
 
 
-![img](https://diycode.b0.upaiyun.com/photo/2018/bcc8dda484d608389246d17353e3e767.gif)
+![](https://diycode.b0.upaiyun.com/photo/2019/f794ad7337d2885699c4d189694e7cf2.gif)
+
+
 
 
 
@@ -174,7 +176,7 @@ Metal 系列的实战教程，会循序渐进，穿插详细介绍各个用到�
 
 
 
-![img](https://diycode.b0.upaiyun.com/photo/2018/c8349d19d12ff25ef7a47552f27ba702.gif)
+![](https://diycode.b0.upaiyun.com/photo/2019/1a826064d70d1c2ae4d9862a50f9e0ce.gif)
 
 
 
@@ -192,13 +194,9 @@ Metal 系列的实战教程，会循序渐进，穿插详细介绍各个用到�
 
 
 
+To be continued ~
 
 
-
-
-
-...
-**To be continued ~**
 
 ------
 
