@@ -15,6 +15,18 @@
 		3B13A045218B208B00FD2A0F /* LookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B13A044218B208B00FD2A0F /* LookupFilter.metal */; };
 		3B13A047218B23BA00FD2A0F /* lut_neutral.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B13A046218B23BA00FD2A0F /* lut_neutral.png */; };
 		3B13A04B218B250500FD2A0F /* lut_abao.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B13A04A218B250500FD2A0F /* lut_abao.png */; };
+		3B25C9A921EB32A70068F3C7 /* SegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B25C9A821EB32A70068F3C7 /* SegmentViewController.swift */; };
+		3B25C9AB21EB39AF0068F3C7 /* Segment.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B25C9AA21EB39AF0068F3C7 /* Segment.mlmodel */; };
+		3B25C9AF21EB3C070068F3C7 /* UIImage+Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B25C9AE21EB3C070068F3C7 /* UIImage+Segment.swift */; };
+		3B25C9B121EB3F7D0068F3C7 /* image_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9B021EB3F7D0068F3C7 /* image_6.jpg */; };
+		3B25C9B321EB55570068F3C7 /* SegmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B25C9B221EB55570068F3C7 /* SegmentFilter.swift */; };
+		3B25C9B521EB56830068F3C7 /* SegmentFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3B25C9B421EB56830068F3C7 /* SegmentFilter.metal */; };
+		3B25C9BB21EB5C4E0068F3C7 /* image_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9BA21EB5C4E0068F3C7 /* image_7.jpg */; };
+		3B25C9C221EB684A0068F3C7 /* material_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9C121EB684A0068F3C7 /* material_0.jpg */; };
+		3B25C9C721EB68780068F3C7 /* material_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9C321EB68770068F3C7 /* material_1.jpg */; };
+		3B25C9C821EB68780068F3C7 /* material_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9C421EB68770068F3C7 /* material_2.jpg */; };
+		3B25C9C921EB68780068F3C7 /* material_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9C521EB68770068F3C7 /* material_3.jpg */; };
+		3B25C9CA21EB68780068F3C7 /* material_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B25C9C621EB68780068F3C7 /* material_4.jpg */; };
 		3B5B68B7213A87C6006F7B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B68B6213A87C6006F7B17 /* AppDelegate.swift */; };
 		3B5B68BC213A87C6006F7B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B68BA213A87C6006F7B17 /* Main.storyboard */; };
 		3B5B68BE213A87C6006F7B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B5B68BD213A87C6006F7B17 /* Assets.xcassets */; };
@@ -68,6 +80,18 @@
 		3B13A044218B208B00FD2A0F /* LookupFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LookupFilter.metal; sourceTree = "<group>"; };
 		3B13A046218B23BA00FD2A0F /* lut_neutral.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_neutral.png; sourceTree = "<group>"; };
 		3B13A04A218B250500FD2A0F /* lut_abao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lut_abao.png; sourceTree = "<group>"; };
+		3B25C9A821EB32A70068F3C7 /* SegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentViewController.swift; sourceTree = "<group>"; };
+		3B25C9AA21EB39AF0068F3C7 /* Segment.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Segment.mlmodel; sourceTree = "<group>"; };
+		3B25C9AE21EB3C070068F3C7 /* UIImage+Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Segment.swift"; sourceTree = "<group>"; };
+		3B25C9B021EB3F7D0068F3C7 /* image_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_6.jpg; sourceTree = "<group>"; };
+		3B25C9B221EB55570068F3C7 /* SegmentFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentFilter.swift; sourceTree = "<group>"; };
+		3B25C9B421EB56830068F3C7 /* SegmentFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SegmentFilter.metal; sourceTree = "<group>"; };
+		3B25C9BA21EB5C4E0068F3C7 /* image_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_7.jpg; sourceTree = "<group>"; };
+		3B25C9C121EB684A0068F3C7 /* material_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = material_0.jpg; sourceTree = "<group>"; };
+		3B25C9C321EB68770068F3C7 /* material_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = material_1.jpg; sourceTree = "<group>"; };
+		3B25C9C421EB68770068F3C7 /* material_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = material_2.jpg; sourceTree = "<group>"; };
+		3B25C9C521EB68770068F3C7 /* material_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = material_3.jpg; sourceTree = "<group>"; };
+		3B25C9C621EB68780068F3C7 /* material_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = material_4.jpg; sourceTree = "<group>"; };
 		3B5B68B3213A87C6006F7B17 /* MetalImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5B68B6213A87C6006F7B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B5B68BB213A87C6006F7B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +164,31 @@
 				3BC91ADD213B7CF1008E86C3 /* RenderView.swift */,
 			);
 			path = Outputs;
+			sourceTree = "<group>";
+		};
+		3B25C9A721EB328F0068F3C7 /* Segment */ = {
+			isa = PBXGroup;
+			children = (
+				3B25C9C021EB68260068F3C7 /* material */,
+				3B25C9AA21EB39AF0068F3C7 /* Segment.mlmodel */,
+				3B25C9A821EB32A70068F3C7 /* SegmentViewController.swift */,
+				3B25C9AE21EB3C070068F3C7 /* UIImage+Segment.swift */,
+				3B25C9B221EB55570068F3C7 /* SegmentFilter.swift */,
+				3B25C9B421EB56830068F3C7 /* SegmentFilter.metal */,
+			);
+			path = Segment;
+			sourceTree = "<group>";
+		};
+		3B25C9C021EB68260068F3C7 /* material */ = {
+			isa = PBXGroup;
+			children = (
+				3B25C9C121EB684A0068F3C7 /* material_0.jpg */,
+				3B25C9C321EB68770068F3C7 /* material_1.jpg */,
+				3B25C9C421EB68770068F3C7 /* material_2.jpg */,
+				3B25C9C521EB68770068F3C7 /* material_3.jpg */,
+				3B25C9C621EB68780068F3C7 /* material_4.jpg */,
+			);
+			path = material;
 			sourceTree = "<group>";
 		};
 		3B5B68AA213A87C6006F7B17 = {
@@ -267,6 +316,8 @@
 				3B9D8EB5218C81DD0030D468 /* image_3.jpg */,
 				3B9D8EB4218C81DC0030D468 /* image_4.jpg */,
 				3BB0036821C948F3009254A8 /* image_5.jpg */,
+				3B25C9B021EB3F7D0068F3C7 /* image_6.jpg */,
+				3B25C9BA21EB5C4E0068F3C7 /* image_7.jpg */,
 				3B13A046218B23BA00FD2A0F /* lut_neutral.png */,
 				3B13A04A218B250500FD2A0F /* lut_abao.png */,
 				3B0756DA21AF7F87000834C1 /* toonTest.png */,
@@ -277,6 +328,7 @@
 		3BC91AEE213BD8FE008E86C3 /* Practice */ = {
 			isa = PBXGroup;
 			children = (
+				3B25C9A721EB328F0068F3C7 /* Segment */,
 				3BB0036521C92B21009254A8 /* Stretch */,
 				3BCF241321C6647500A0D43D /* StyleTransfer */,
 				3B95D05121AEB913000FC36B /* Toon */,
@@ -380,8 +432,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B25C9B121EB3F7D0068F3C7 /* image_6.jpg in Resources */,
+				3B25C9CA21EB68780068F3C7 /* material_4.jpg in Resources */,
 				3B9D8EB6218C81DD0030D468 /* image_4.jpg in Resources */,
+				3B25C9C921EB68780068F3C7 /* material_3.jpg in Resources */,
 				3BC91AED213BD6AD008E86C3 /* image_1.jpg in Resources */,
+				3B25C9C821EB68780068F3C7 /* material_2.jpg in Resources */,
 				3B13A04B218B250500FD2A0F /* lut_abao.png in Resources */,
 				3B5B68C1213A87C6006F7B17 /* LaunchScreen.storyboard in Resources */,
 				3BCF241E21C6681D00A0D43D /* StyleTransfer.xcassets in Resources */,
@@ -389,9 +445,12 @@
 				3B5B68BE213A87C6006F7B17 /* Assets.xcassets in Resources */,
 				3B9D8EB7218C81DD0030D468 /* image_3.jpg in Resources */,
 				3B13A047218B23BA00FD2A0F /* lut_neutral.png in Resources */,
+				3B25C9C221EB684A0068F3C7 /* material_0.jpg in Resources */,
 				3BC91AEC213BD6AD008E86C3 /* image_2.jpg in Resources */,
 				3B5B68BC213A87C6006F7B17 /* Main.storyboard in Resources */,
 				3B0756DB21AF7F87000834C1 /* toonTest.png in Resources */,
+				3B25C9BB21EB5C4E0068F3C7 /* image_7.jpg in Resources */,
+				3B25C9C721EB68780068F3C7 /* material_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +464,11 @@
 				3BEBF07F21AD748F00FC832F /* ZoomBlurViewController.swift in Sources */,
 				3B79B3D721834588008BF06D /* ShaderUniformSettings.swift in Sources */,
 				3BC91AE3213BC81D008E86C3 /* Rendering.swift in Sources */,
+				3B25C9AF21EB3C070068F3C7 /* UIImage+Segment.swift in Sources */,
 				3B0120D4214E89A700B110A9 /* PictureInput.swift in Sources */,
 				3BD50EE4218D4D9B000F7CC9 /* SaturationFilter.swift in Sources */,
 				3B79B3D5218341AE008BF06D /* BasicOperation.swift in Sources */,
+				3B25C9B321EB55570068F3C7 /* SegmentFilter.swift in Sources */,
 				3BC91AF5213BF391008E86C3 /* Texture.swift in Sources */,
 				3B5B68CC213A8CE2006F7B17 /* Context.swift in Sources */,
 				3BC91ADE213B7CF1008E86C3 /* RenderView.swift in Sources */,
@@ -424,12 +485,15 @@
 				3B8B3D782185B96700BF6EB8 /* SimpleViewController.swift in Sources */,
 				3BC91AE7213BD427008E86C3 /* Passthrough.metal in Sources */,
 				3BCF241C21C666A000A0D43D /* candy.mlmodel in Sources */,
+				3B25C9B521EB56830068F3C7 /* SegmentFilter.metal in Sources */,
 				3BCF241921C666A000A0D43D /* the_scream.mlmodel in Sources */,
 				3BB0036721C92B34009254A8 /* StretchViewController.swift in Sources */,
 				3B8B3D742185B7A200BF6EB8 /* BrightnessFilter.metal in Sources */,
 				3B8B3D722185B75600BF6EB8 /* BrightnessFilter.swift in Sources */,
+				3B25C9AB21EB39AF0068F3C7 /* Segment.mlmodel in Sources */,
 				3B8B3D7A2185B99600BF6EB8 /* ColorFilterViewController.swift in Sources */,
 				3B95D05321AEB93C000FC36B /* ToonFilter.metal in Sources */,
+				3B25C9A921EB32A70068F3C7 /* SegmentViewController.swift in Sources */,
 				3BCF241A21C666A000A0D43D /* mosaic.mlmodel in Sources */,
 				3B13A043218B1F2300FD2A0F /* LookupFilter.swift in Sources */,
 				3BCF242221C6692600A0D43D /* StyleTransferInput.swift in Sources */,
